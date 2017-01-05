@@ -2,7 +2,6 @@
 
   var NoteController = function(noteList){
     this.noteList = noteList;
-    this.noteList.addNote("Instatiated Note");
     this.noteListView = new NoteListView(noteList);
   };
 
@@ -13,6 +12,14 @@
 
   NoteController.prototype.renderSingleNoteHTML = function(){
     window.addEventListener("hashchange", function () {changeSingleNoteHTML(getSingleNoteHTML()); }, false);
+  };
+
+  NoteController.prototype.submitEventListener = function (){
+    var noteForm = document.getElementById("noteForm");
+    noteForm.addEventListener("submit", function(event){
+      event.preventDefault();
+      console.log(text.value);
+    });
   };
 
   function findNoteURL(location){

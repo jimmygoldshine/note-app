@@ -58,9 +58,6 @@ function getSingleNoteHTML(){
 }
 
 
-
-
-
 noteControllerInstantiated();
 validateInnerHTML();
 findIdOfNote();
