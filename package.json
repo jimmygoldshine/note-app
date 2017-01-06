@@ -1,0 +1,23 @@
+{
+  "name": "note-app",
+  "version": "1.0.0",
+  "description": "application for recording notes",
+  "main": "assert.js",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmygoldshine/note-app.git"
+  },
+  "author": "jimmygoldshine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimmygoldshine/note-app/issues"
+  },
+  "homepage": "https://github.com/jimmygoldshine/note-app#readme"
+}
