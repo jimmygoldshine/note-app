@@ -14,12 +14,18 @@
     window.addEventListener("hashchange", function () {changeSingleNoteHTML(getSingleNoteHTML()); }, false);
   };
 
-  NoteController.prototype.submitEventListener = function (){
+  NoteController.prototype.submitEventListener = function (controller){
     var noteForm = document.getElementById("noteForm");
     noteForm.addEventListener("submit", function(event){
       event.preventDefault();
-      console.log(text.value);
+      interceptedNote = (text.value);
+      controller.processNote(interceptedNote);
     });
+  };
+
+  NoteController.prototype.processNote = function(interceptedNote){
+    this.noteList.addNote(interceptedNote);
+    this.convertToHTML();
   };
 
   function findNoteURL(location){
@@ -48,7 +54,7 @@
 
   function changeSingleNoteHTML(text){
     var element = document.getElementById("app");
-    element.innerHTML = text;
+    element.innerHTML = controller.noteListView.convert() + text; 
   }
 
   NoteController.prototype.changeSingleNoteHTML = function(text){

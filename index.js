@@ -4,4 +4,4 @@ controller.convertToHTML();
 
 controller.renderSingleNoteHTML();
 
-controller.submitEventListener();
+controller.submitEventListener(controller);
